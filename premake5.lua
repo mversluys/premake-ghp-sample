@@ -1,13 +1,12 @@
 require 'ghp'
+ghp.consumer('mversluys/premake-ghp-sample')
+
 location 'build'
 
 workspace 'sample-workspace'
         configurations { 'Debug', 'Release' }
 
-filter { 'system:macosx' }
-        buildoptions { '-std=c++11', '-stdlib=libc++' }
-        linkoptions { '-std=c++11'}
-filter { }
+flags { 'C++11' }
 
 ghp.import('mversluys/asio', 'v1.10.6a')
 ghp.import('mversluys/websocketpp', 'v0.6.0')
