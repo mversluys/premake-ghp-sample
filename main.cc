@@ -68,7 +68,7 @@ void Server::OnMessageHTTP(websocketpp::connection_hdl handle)
 	cout << "http: " << request.get_method() << " " << uri->str() << endl;
 
 	connection->set_body(std::string("hello"));
-    connection->set_status(websocketpp::http::status_code::ok);
+	connection->set_status(websocketpp::http::status_code::ok);
 }
 
 void Server::OnMessageWebSocket(websocketpp::connection_hdl handle, WebSocketServer::message_ptr message)
