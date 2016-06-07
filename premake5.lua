@@ -8,6 +8,8 @@ workspace 'sample-workspace'
 
 flags { 'C++11' }
 
+ghp.environment = 'ghp_environment'
+
 ghp.import('mversluys/asio', 'v1.10.6a')
 ghp.import('mversluys/websocketpp', 'v0.6.0')
 
